@@ -105,9 +105,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 	</head>
 	<body class="img js-fullheight" style="background-image: url(images/bg.jpg);">
-    <div class="float-right display-4 text-white">
-        <i class="bx bxs-moon change-theme" id="theme-button"></i>
-    </div>
+    <?php
+    include("navbar.php");
+    ?>
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -153,6 +153,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div id="zad">Я тёмная тема, да я вот такая странная. Я просто не понимаю, как сделать по дуругому</div>
     </div>
     
+
+    <?php
+    include("footer.php");
+    ?>
 
 	<script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>

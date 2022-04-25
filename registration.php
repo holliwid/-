@@ -101,6 +101,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -108,7 +111,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         body{height: 100%;}
     </style>
 </head>
-<body class="d-flex align-items-center justify-content-center img js-fullheight" style="background-image: url(images/bg.jpg);">
+<body class="img js-fullheight" style="background-image: url(images/bg.jpg);">
+
+    <?php
+    include("navbar.php");
+    ?>
+
+    <div class="d-flex align-items-center justify-content-center">
     <div class="login-wrap">
     <div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5 ">
@@ -135,7 +144,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <p>Already have an account? <a href="index.php">Login here</a>.</p>
         </form>
-    </div>    
+    </div>  
+    </div>  
+
+    <div class="zad row justify-content-center" >
+        <div id="zad" class="text-white">Я тёмная тема, да я вот такая странная. Я просто не понимаю, как сделать по дуругому</div>
+    </div>
+
+    <?php
+    include("footer.php");
+    ?>
 
     <script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>

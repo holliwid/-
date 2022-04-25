@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is logged in, if not then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
+    header("location: index.php");
     exit;
 }
 ?>
@@ -44,9 +44,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </head>
 
 <body style="background-image: url(images/bg.jpg);" class="h-100">
-    <div class="float-right display-4 text-white">
-        <i class="bx bxs-moon change-theme" id="theme-button"></i>
-    </div>
+    <?php
+    include("navbar.php");
+    ?>
     <section class="">
         <div class="row">
             <div class="d-flex justify-content-center flex-nowrap">
@@ -147,6 +147,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class="zad row text-center">
         <div id="zad">Я тёмная тема, да я вот такая странная. Я просто не понимаю, как сделать по дуругому</div>
     </div>
+
+
+    <?php
+    include("footer.php");
+    ?>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
